@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  transport-app:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./transport_records.db:/app/transport_records.db
+    environment:
+      - FLASK_ENV=production
